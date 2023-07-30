@@ -1,0 +1,29 @@
+.imgFondo {
+   background-image: url("../assets/img/hawaii.jpg");
+   background-position: center;
+   background-size: cover;
+   height: 80vh;
+   background-color: rgb(66, 63, 63);
+   background-blend-mode: soft-light;
+   margin-top: 5em;
+}
+
+.nav-item:hover {
+   background-color: slategrey;
+   border-radius: 20px;
+}
+
+.btn-primary {
+   background-color: transparent;
+   border: 2px solid white;
+}
+
+.img-fluid {
+   max-width: 100%;
+   height: -webkit-fill-available;
+}
+
+#footer {
+   margin-top: 2%;
+   padding: 1%;
+}

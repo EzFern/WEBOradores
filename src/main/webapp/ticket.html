@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/bootstrap.min.css">
+   <link rel="stylesheet" href="./css/style.css">
+   <title>Los Oradores</title>
+   <link rel="shortcut icon" href="./assets/img/codoacodo.png" type="image/x-icon">
+</head>
+
+<body>
+
+   <!-- Header -->
+   <nav class="navbar navbar-expand-lg bg-secondary fixed-top">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="#">
+            <img src="./assets/img/codoacodo.png" alt="Logo" width="100" class="d-inline-block align-text-center">
+            Conf Bs As
+         </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html#">La conferencia</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./index.html#oradores">Los oradores</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./index.html#lugar">El lugar y la fecha</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./index.html#conviertete">Conviértete en orador</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link disabled text-success" href="ticket.html">Comprar Ticket</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+  <!-- Cuerpo -->
+    <main> 
+        <div class="container px-4 py-5" id="feature-3">
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3" id="cartas">
+                <div class="col">
+                    <div class="card border-primary mb-3" style="width: 18rem; text-align: center;">
+                        <div class="card-body">
+                            <h5 class="card-title">Estudiante</h5>
+                            <h6 class="card-title">Tiene un descuento</h6>
+                            <h5 class="card-title">80%</h5>
+                            <p class="card-text">*Presentar documentación</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-success mb-3" style="width: 18rem;text-align: center;">
+                        <div class="card-body">
+                            <h5 class="card-title">Trainee</h5>
+                            <h6 class="card-title">Tiene un descuento</h6>
+                            <h5 class="card-title">50%</h5>
+                            <p class="card-text">*Presentar documentación</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-warning mb-3" style="width: 18rem;text-align: center;">
+                        <div class="card-body">
+                            <h5 class="card-title">Junior</h5>
+                            <h6 class="card-title">Tiene un descuento</h6>
+                            <h5 class="card-title">15%</h5>
+                            <p class="card-text">*Presentar documentación</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </main>
+
+    <!-- inicio del formulario -->
+    <section>
+        <h6 style="text-align: center;">Venta</h6>
+        <h1 style="text-align: center;">VALOR DE TICKET $200</h1>
+        <form class="container-fluid" style="width: 63%" action="cargaForm.jsp">
+            <div class="row">
+            <div class="col">
+                <input type="text" name="nombre" class="form-control" placeholder="First name" aria-label="First name" id="nombre">
+            </div>
+            <div class="col">
+                <input type="text" name="apellido" class="form-control" placeholder="Last name" aria-label="Last name" id="apellido">
+            </div>
+            </div>
+            <br>
+            <div class="mb-3">
+            <input type="email" name="mail" class="form-control" id="mail" placeholder="name@example.com">
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                <label for="cantidad">Cantidad de entradas</label>
+                <input id="cantidad" name="cantidad" type="number" min="1" max="10" class="form-control" placeholder="">
+                </div>
+                <div class="col">
+                <label for="categoria">Categoría</label>
+                <select class="form-select" name="categoria" aria-label="Default select example" id="categoria">
+                    <option selected="">--Seleccione--</option>
+                    <option value="Sin Categoria">Sin Categoria</option>
+                    <option value="Estudiante">Estudiante</option>
+                    <option value="Trainee">Trainee</option>
+                    <option value="Junior">Junior</option>
+                </select>
+                </div>
+            </div>
+            <br>
+            <span id="error" style="color:red"></span>
+            <div class="alert alert-primary" role="alert">
+                Total a pagar: <span id="total_a_pagar"></span>
+            </div>
+            <br>
+            <div class="row">
+                <div class="d-grid col-6 mx-auto;">
+                <button class="btn btn-success" type="button" id="btnBorrar">Borrar</button>
+                </div>
+                <div class="d-grid col-6 mx-auto">
+                    <button class="btn btn-success" type="submit" id="btnResumen">Resumen</button>
+                </div>
+            </div>
+            <br>
+            <br>
+
+        </form>
+    </section>
+
+    <footer>
+        <nav class="navbar navbar-expand-lg bg-dark fixed-bottom bg-gradient">
+            <div class="container-fluid d-flex ">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-sm-center" href="#">Preguntas frecuentes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-sm-center" href="#">Contáctanos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-sm-center" href="#">Prensa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-sm-center" href="#">Conferencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-sm-center" href="#">Términos y condiciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-sm-center" href="#">Privacidad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-sm-center" href="#">Estudiantes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </footer>
+    <br>
+
+<!-- JavaScript Libraries -->
+<script src="./js/script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+</script>
+</body>
+
+</html>
